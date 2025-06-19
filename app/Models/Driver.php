@@ -38,7 +38,6 @@ class Driver extends Model
         $select = app(LocationExpressionBuilder::class)::getSelectNearestExpression();
 
         return $query->selectRaw($select, [$location->getLat(), $location->getLng(), $location->getLat()])
-                    ->where('is_available', true)
                     ->orderBy('distance');
     }
 }

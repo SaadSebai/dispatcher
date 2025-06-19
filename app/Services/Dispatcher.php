@@ -11,6 +11,7 @@ class Dispatcher
     {
         return Driver::query()
                     ->nearestTo($pickupLocation)
+                    ->where('is_available', true)
                     ->first();
     }
 

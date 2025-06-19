@@ -22,18 +22,8 @@ class Location
         return $this->lng;
     }
 
-    public function setLng(float $lng): void
-    {
-        $this->lng = $lng;
-    }
-
     public function getLat(): float
     {
         return $this->lat;
-    }
-
-    public function setLat(float $lat): void
-    {
-        $this->lat = $lat;
     }
 }
